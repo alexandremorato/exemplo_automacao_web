@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  chrome:
+    image: selenium/standalone-chrome
+    ports:
+      - 4444:4444
+    volumes:
+      - /dev/shm:/dev/shm
+    networks:
+      - net 
+  selenium:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - chrome
+    networks:
+      - net  
+
+networks:
+  net:
+      driver: bridge    

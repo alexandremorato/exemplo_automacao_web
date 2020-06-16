@@ -1,0 +1,299 @@
+[
+  {
+    "uri": "features/specifications/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "Como usuário do site \nPreciso realizar o login\nPara ter acesso a área logado do site",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@login",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "login;realizar-login-com-sucesso",
+        "keyword": "Cenário",
+        "name": "Realizar login com sucesso",
+        "description": "",
+        "line": 9,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.32.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25673
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.32.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20456
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que tenha um usuário cadastrado",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16164123340
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "estou na página de login",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1542390098
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar o login com dados válidos",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1741207143
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o login é realizado com sucesso",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104833084
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15727
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.32.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50482026
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;realizar-login-com-dados-inválido",
+        "keyword": "Cenário",
+        "name": "Realizar login com dados inválido",
+        "description": "",
+        "line": 15,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          },
+          {
+            "name": "@wip",
+            "line": 14
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.32.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12866
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.32.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12784
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "estou na página de login",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1548901989
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "tentar realizar o login com os seguintes dados:",
+            "line": 17,
+            "rows": [
+              {
+                "cells": [
+                  "Email",
+                  "Password"
+                ]
+              },
+              {
+                "cells": [
+                  "",
+                  "1234567"
+                ]
+              },
+              {
+                "cells": [
+                  "teste@",
+                  "1234567"
+                ]
+              },
+              {
+                "cells": [
+                  "teste@teste.com",
+                  "1234546"
+                ]
+              },
+              {
+                "cells": [
+                  "teste@teste.com",
+                  ""
+                ]
+              },
+              {
+                "cells": [
+                  "teste@teste.com",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "",
+                  ""
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8581004931
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "deve ser apresentado a seguinte mensagem de erro:",
+            "line": 25,
+            "rows": [
+              {
+                "cells": [
+                  "Mensagem"
+                ]
+              },
+              {
+                "cells": [
+                  "An email address required."
+                ]
+              },
+              {
+                "cells": [
+                  "Invalid email address."
+                ]
+              },
+              {
+                "cells": [
+                  "Authentication failed."
+                ]
+              },
+              {
+                "cells": [
+                  "Password is required."
+                ]
+              },
+              {
+                "cells": [
+                  "Invalid password."
+                ]
+              },
+              {
+                "cells": [
+                  "An email address required."
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3161069
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12254
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.32.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57510685
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

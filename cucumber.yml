@@ -1,0 +1,6 @@
+all: --format html --out report/all.html --format progress 
+login: --tag @login --format html --out report/login.html --format progress
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
+ci: BROWSER=ci --format json --out report/ci.json --format progress
