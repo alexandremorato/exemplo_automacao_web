@@ -19,7 +19,7 @@ Instalação `Geckodriver`
 
 Instalação `Chrome Driver`
 
-Verificar qual a versão do seu navegador e realizar o download da respectivo versão através do [link](https://chromedriver.chromium.org/downloads)
+Verificar qual a versão do seu navegador e realizar o download através do [link](https://chromedriver.chromium.org/downloads)
  ```
  unzip chromedriver_linux64.zip
  chmod +x chromedriver 
